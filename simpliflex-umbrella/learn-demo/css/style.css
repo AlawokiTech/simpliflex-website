@@ -108,6 +108,18 @@ a{color:inherit}
 .asec h3{color:#33307a;font-size:20px;margin:16px 0 8px}
 .asec-b{font-size:16px;line-height:1.65;color:#2a2f48}
 .asec-b p{margin:10px 0}
+/* ---- read-aloud (speak.js) ---- */
+.listenbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.listen-all{padding:10px 16px}
+.listen-hint{font-size:13px;color:#6b7194}
+.asec-head{display:flex;align-items:center;gap:10px}
+.asec-head h3{margin:14px 0 6px}
+.sec-play{flex:none;width:30px;height:30px;border:0;border-radius:50%;cursor:pointer;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#7c5cff,#5b8bf5);box-shadow:0 4px 10px rgba(20,10,60,.25);transition:transform .12s}
+.sec-play:hover{transform:scale(1.1);filter:brightness(1.08)}
+.intro.speaking,.asec.speaking,.facts.speaking,.dyk.speaking,.dict-entry.speaking{outline:3px solid #7c5cff;outline-offset:3px;box-shadow:0 0 0 6px rgba(124,92,255,.16),0 12px 28px rgba(20,10,60,.2)}
+.dict-w{display:flex;align-items:center;gap:12px}
+.dict-say{flex:none;width:34px;height:34px;border:0;border-radius:50%;cursor:pointer;color:#fff;font-size:15px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0e9aa7,#13c0cf);box-shadow:0 4px 10px rgba(20,10,60,.22);transition:transform .12s}
+.dict-say:hover{transform:scale(1.1);filter:brightness(1.08)}
 .ilink{color:#6b3ec8;font-weight:700;text-decoration:none;border-bottom:2px solid #d9cdff}
 .ilink:hover{background:#f3eeff}
 .wiki-dgm-box{margin:14px 0;text-align:center}

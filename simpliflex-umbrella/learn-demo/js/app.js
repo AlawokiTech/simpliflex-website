@@ -6,6 +6,13 @@
   var W = window.WIKI || { cats: [], articles: [], byId: {}, catById: {} };
 
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  // plain spoken text: drop [[diagram:..]], turn [[id|label]] into its label, collapse space
+  function plain(s) {
+    return String(s == null ? "" : s)
+      .replace(/\[\[diagram:[^\]]*\]\]/g, " ")
+      .replace(/\[\[([^\]]+)\]\]/g, function (m, b) { var p = b.split("|"); var id = p[0].trim(); return (p[1] || (W.byId[id] ? W.byId[id].title : id)).trim(); })
+      .replace(/\s+/g, " ").trim();
+  }
   function get(k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } }
   function set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 
@@ -170,8 +177,10 @@
     var a = W.byId[id]; if (!a) return viewSearchMsg("Hmm, that topic isn't here yet.");
     markVisited(id);
     var c = catOf(a);
-    var secs = (a.sections || []).map(function (s) {
-      return '<section class="asec"><h3>' + esc(s.h) + '</h3><div class="asec-b">' + inline(s.body) + '</div></section>';
+    var secs = (a.sections || []).map(function (s, i) {
+      return '<section class="asec" data-seg="sec' + i + '">' +
+        '<div class="asec-head"><button class="sec-play" data-seg="sec' + i + '" title="Listen to this section" aria-label="Listen to this section">▶</button><h3>' + esc(s.h) + '</h3></div>' +
+        '<div class="asec-b">' + inline(s.body) + '</div></section>';
     }).join("");
     var facts = (a.facts || []).length ? '<div class="facts"><h3>📊 Notable Facts &amp; Figures</h3><ul>' + a.facts.map(function (f) { return '<li>' + inline(f) + '</li>'; }).join("") + '</ul></div>' : '';
     var dyk = a.dyk ? '<div class="dyk">💡 <b>Did you know?</b> ' + inline(a.dyk) + '</div>' : '';
@@ -195,6 +204,7 @@
           '<div class="ahero-cap"><a class="back light" href="#/cat/' + a.cat + '">← ' + c.emoji + ' ' + esc(c.name) + '</a><h1>' + (a.emoji || "") + ' ' + esc(a.title) + '</h1></div>' +
         '</div>' +
         '<main class="wrap narrow">' +
+          '<div class="listenbar" id="listenbar"><button class="wbtn listen-all" id="listenAll">🔊 Listen to this page</button> <span class="listen-hint">— or tap ▶ on any section to start there</span></div>' +
           (a.intro ? '<p class="intro">' + inline(a.intro) + '</p>' : '') +
           snap + secs + facts + dyk + words + related +
           '<div class="amore"><a class="wbtn ghost" href="#/cat/' + a.cat + '">More ' + esc(c.name) + ' →</a> <button class="wbtn" id="surprise2">🎲 Surprise me</button></div>' +
@@ -205,6 +215,35 @@
       b.onclick = function () { var list = get("wiki-words", []); if (!list.some(function (x) { return x.w === b.dataset.w; })) { list.push({ w: b.dataset.w, d: b.dataset.d }); set("wiki-words", list); pushProgress(); } b.textContent = "✓ Saved"; b.disabled = true; };
     });
     var s2 = document.getElementById("surprise2"); if (s2) s2.onclick = function () { location.hash = "#/a/" + encodeURIComponent(randomArticle().id); };
+
+    // ---- read-aloud (offline Web Speech) ----
+    if (window.Speak && window.Speak.supported) {
+      var segs = [];
+      var introEl = root.querySelector(".intro");
+      if (a.intro && introEl) segs.push({ el: introEl, text: plain(a.intro), label: "Introduction" });
+      (a.sections || []).forEach(function (s, i) {
+        var el = root.querySelector('section.asec[data-seg="sec' + i + '"]');
+        if (el) segs.push({ el: el, text: plain(s.h) + ". " + plain(s.body), label: s.h });
+      });
+      var factsEl = root.querySelector(".facts");
+      if (factsEl && (a.facts || []).length) segs.push({ el: factsEl, text: "Notable facts. " + a.facts.map(plain).join(". ") + ".", label: "Notable Facts" });
+      var dykEl = root.querySelector(".dyk");
+      if (a.dyk && dykEl) segs.push({ el: dykEl, text: "Did you know? " + plain(a.dyk), label: "Did you know?" });
+
+      var la = document.getElementById("listenAll");
+      if (la) la.onclick = function () { window.Speak.playSegments(segs, 0); };
+      Array.prototype.forEach.call(document.querySelectorAll(".sec-play"), function (btn) {
+        btn.onclick = function () {
+          var el = btn.closest ? btn.closest("section.asec") : btn.parentNode.parentNode;
+          var idx = 0; for (var i = 0; i < segs.length; i++) { if (segs[i].el === el) { idx = i; break; } }
+          window.Speak.playSegments(segs, idx);
+        };
+      });
+    } else {
+      // browser has no speech support — hide the listen UI
+      var lb = document.getElementById("listenbar"); if (lb) lb.style.display = "none";
+      Array.prototype.forEach.call(document.querySelectorAll(".sec-play"), function (b) { b.style.display = "none"; });
+    }
     window.scrollTo(0, 0);
   }
 
@@ -264,12 +303,32 @@
     var D = window.DICTIONARY || {}, w = word.toLowerCase(), ms = D[w];
     if (!ms) return '<div class="dict-none">No entry for <b>' + esc(word) + '</b>. Check the spelling, or try a related word below.</div>';
     var POS = { noun: "🔵", verb: "🟢", adjective: "🟣", adverb: "🟠" };
-    return '<div class="dict-entry"><h2 class="dict-w">' + esc(w) + '</h2>' +
+    return '<div class="dict-entry"><h2 class="dict-w">' + esc(w) +
+      '<button class="dict-say" data-say="' + esc(w) + '" title="Pronounce &amp; read aloud" aria-label="Pronounce ' + esc(w) + '">🔊</button></h2>' +
       ms.map(function (m, i) {
         return '<div class="dict-sense"><span class="dict-pos">' + (POS[m.p] || "▫️") + ' ' + esc(m.p || "") + '</span>' +
           '<div class="dict-def"><b>' + (i + 1) + '.</b> ' + esc(m.d) + '</div>' +
           (m.x ? '<div class="dict-ex">“' + esc(m.x) + '”</div>' : '') + '</div>';
       }).join("") + '</div>';
+  }
+  // wire the 🔊 pronounce buttons in a freshly-rendered dictionary body
+  function wireDict(container) {
+    if (!(window.Speak && window.Speak.supported)) {
+      Array.prototype.forEach.call(container.querySelectorAll(".dict-say"), function (b) { b.style.display = "none"; });
+      return;
+    }
+    Array.prototype.forEach.call(container.querySelectorAll(".dict-say"), function (btn) {
+      btn.onclick = function () {
+        var w = (btn.dataset.say || "").toLowerCase();
+        var D = window.DICTIONARY || {}, ms = D[w];
+        var entryEl = btn.closest ? btn.closest(".dict-entry") : btn.parentNode;
+        var text = w;
+        if (ms && ms.length) {
+          text = w + ". " + ms.slice(0, 3).map(function (m) { return (m.d || "") + (m.x ? " For example: " + m.x : ""); }).join(". ");
+        }
+        window.Speak.playSegment(entryEl, plain(text), w);
+      };
+    });
   }
   function dictSuggest(q) {
     var D = window.DICTIONARY || {}, p = q.toLowerCase(), out = [];
@@ -295,11 +354,13 @@
         var wod = NICE_WORDS[todaySeed() % NICE_WORDS.length];
         body.innerHTML = '<div class="dict-wod"><div class="fod-tag">🌟 Word of the Day</div>' + dictEntry(wod) + '</div>' +
           '<p class="muted">Type a word above to look it up — the dictionary has tens of thousands of words!</p>';
+        wireDict(body);
         return;
       }
       var sug = dictSuggest(q);
       body.innerHTML = dictEntry(q) +
         (sug.length ? '<div class="dict-sug"><b>More words:</b> ' + sug.map(function (w) { return '<a class="relchip" href="#/dictionary/' + encodeURIComponent(w) + '" style="--c:#0e9aa7">' + esc(w) + '</a>'; }).join("") + '</div>' : '');
+      wireDict(body);
     });
     window.scrollTo(0, 0);
   }
