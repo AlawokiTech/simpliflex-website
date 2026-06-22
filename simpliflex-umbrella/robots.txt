@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simpliflex.com.ng/sitemap.xml

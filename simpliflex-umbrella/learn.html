@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Simpliflex Learn | Offline Learning Apps for Nigerian Children</title>
+    <meta name="description" content="Simpliflex Learn — a 100% offline learning suite for children ages 6–13: a 335-article interactive encyclopedia, 12,000+ curriculum-aligned practice questions, educational games, dictionary and a parent dashboard. No data costs. No ads. Built for Nigerian families and schools.">
+    <meta name="keywords" content="offline learning app Nigeria, kids educational app, encyclopedia for children, KS1 KS2 Year 7, school learning software Nigeria, Simpliflex Learn">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="canonical" href="https://simpliflex.com.ng/learn.html">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Simpliflex Systems Limited">
+    <meta property="og:title" content="Simpliflex Learn — Offline Learning Apps for Nigerian Children">
+    <meta property="og:description" content="A 100% offline learning suite for children 6–13: a 335-article encyclopedia, 12,000+ curriculum-aligned practice questions, games, dictionary and a parent dashboard. No data costs. No ads.">
+    <meta property="og:url" content="https://simpliflex.com.ng/learn.html">
+    <meta property="og:image" content="https://simpliflex.com.ng/learn-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_NG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simpliflex Learn — Offline Learning for Curious Children">
+    <meta name="twitter:description" content="Encyclopedia, practice, games & a parent dashboard — 100% offline, no data costs, no ads. Built for Nigerian homes and schools.">
+    <meta name="twitter:image" content="https://simpliflex.com.ng/learn-og.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Simpliflex Learn",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web, Windows, Android, offline",
+      "url": "https://simpliflex.com.ng/learn.html",
+      "image": "https://simpliflex.com.ng/learn-og.png",
+      "description": "A 100% offline learning suite for children ages 6–13 — an interactive 335-article encyclopedia, 12,000+ curriculum-aligned practice questions, educational games, a children's dictionary and a parent dashboard. Curriculum-aligned and customisable to any school. No data costs, no ads.",
+      "inLanguage": "en",
+      "audience": { "@type": "EducationalAudience", "educationalRole": "student" },
+      "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "NGN" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Simpliflex Systems Limited",
+        "url": "https://simpliflex.com.ng/",
+        "identifier": "RC-9336897"
+      }
+    }
+    </script>
+
+    <!-- Privacy-friendly analytics -->
+    <script defer data-domain="simpliflex.com.ng" src="https://plausible.io/js/script.js"></script>
+    <style>
+        :root {
+            --navy: #0A1628;
+            --navy-light: #132039;
+            --accent: #00D47E;
+            --accent-dark: #00B86B;
+            --accent-glow: rgba(0, 212, 126, 0.15);
+            --blue: #3B82F6;
+            --purple: #8B5CF6;
+            --orange: #F59E0B;
+            --pink: #EC4899;
+            --white: #FFFFFF;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --text: #0F172A;
+            --serif: 'Instrument Serif', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, sans-serif;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--sans); color: var(--text); background: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 1.25rem; }
+        .section-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-dark); margin-bottom: 0.75rem; }
+        .section-title { font-family: var(--serif); font-size: 2rem; font-weight: 400; color: var(--text); line-height: 1.2; margin-bottom: 1rem; }
+        @media (min-width: 768px) { .section-title { font-size: 2.5rem; } }
+        .section-desc { font-size: 1rem; color: var(--gray-500); line-height: 1.7; max-width: 600px; margin-bottom: 3rem; }
+        .center { text-align: center; margin-left: auto; margin-right: auto; }
+
+        /* NAV */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--gray-200); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; max-width: 1140px; margin: 0 auto; }
+        .nav-brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; color: var(--navy); }
+        .nav-brand img { height: 46px; width: auto; }
+        .nav-brand .pill { font-size: 0.7rem; font-weight: 700; color: var(--accent-dark); background: var(--accent-glow); padding: 0.15rem 0.5rem; border-radius: 100px; letter-spacing: 0.04em; }
+        .nav-links { display: none; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--gray-600); transition: color 0.2s; }
+        .nav-links a:hover { color: var(--navy); }
+        .nav-cta { display: none; padding: 0.625rem 1.25rem; background: var(--accent); color: var(--navy); font-size: 0.85rem; font-weight: 700; border-radius: 8px; transition: all 0.2s; }
+        .nav-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+        @media (min-width: 880px) { .nav-links { display: flex; } .nav-cta { display: inline-flex; } }
+        .mobile-toggle { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
+        @media (min-width: 880px) { .mobile-toggle { display: none; } }
+        .mobile-menu { display: none; position: fixed; inset: 0; background: var(--white); z-index: 200; padding: 5rem 2rem 2rem; flex-direction: column; }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { font-size: 1.1rem; font-weight: 600; padding: 1.1rem 0; border-bottom: 1px solid var(--gray-200); color: var(--text); }
+        .mobile-menu .mobile-close { position: absolute; top: 1rem; right: 1.25rem; background: none; border: none; font-size: 1.75rem; cursor: pointer; }
+
+        /* BUTTONS */
+        .btn-accent { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.95rem 1.85rem; background: var(--accent); color: var(--navy); font-weight: 700; font-size: 0.95rem; border-radius: 10px; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn-accent:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
+        .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.95rem 1.85rem; background: transparent; border: 1px solid rgba(255,255,255,0.22); color: var(--white); font-weight: 600; font-size: 0.95rem; border-radius: 10px; cursor: pointer; transition: all 0.2s; }
+        .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+        .btn-dark { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.95rem 1.85rem; background: var(--navy); color: var(--white); font-weight: 600; font-size: 0.95rem; border-radius: 10px; cursor: pointer; transition: all 0.2s; }
+        .btn-dark:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+        /* HERO */
+        .hero { padding: 7rem 0 4rem; background: var(--navy); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -25%; right: -12%; width: 650px; height: 650px; border-radius: 50%; background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); pointer-events: none; }
+        .hero::after { content: ''; position: absolute; bottom: -25%; left: -12%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(139,92,246,0.10) 0%, transparent 70%); pointer-events: none; }
+        .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+        @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 2.5rem; } }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 100px; font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 1.5rem; }
+        .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+        .hero h1 { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; color: var(--white); line-height: 1.12; margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        @media (min-width: 576px) { .hero h1 { font-size: 3.1rem; } }
+        @media (min-width: 992px) { .hero h1 { font-size: 3.6rem; } }
+        .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 520px; margin-bottom: 2rem; }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-note { margin-top: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+        .hero-note strong { color: var(--accent); }
+
+        /* HERO DEVICE MOCKUP */
+        .device { background: #11192b; border: 1px solid rgba(255,255,255,0.1); border-radius: 26px; padding: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); max-width: 360px; margin: 0 auto; }
+        .device-screen { background: linear-gradient(160deg, #fef9ff 0%, #eef6ff 100%); border-radius: 16px; padding: 1rem; overflow: hidden; }
+        .ds-top { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.85rem; }
+        .ds-logo { font-size: 1.1rem; }
+        .ds-title { font-weight: 700; font-size: 0.85rem; color: var(--navy); }
+        .ds-title span { color: var(--accent-dark); }
+        .ds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.75rem; }
+        .ds-tile { aspect-ratio: 1; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.15rem; font-size: 1.35rem; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .ds-tile small { font-size: 0.5rem; font-weight: 700; color: var(--gray-600); }
+        .ds-bar { display: flex; gap: 0.4rem; }
+        .ds-chip { flex: 1; background: var(--white); border-radius: 8px; padding: 0.4rem; text-align: center; font-size: 0.5rem; font-weight: 700; color: var(--gray-600); box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+        .ds-chip b { display: block; font-size: 0.9rem; color: var(--navy); }
+
+        /* TRUST STRIP */
+        .trust { background: var(--white); border-bottom: 1px solid var(--gray-200); padding: 2.25rem 0; }
+        .trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; text-align: center; }
+        @media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
+        .trust-item h3 { font-size: 1.7rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+        .trust-item h3 span { color: var(--accent); }
+        .trust-item p { font-size: 0.78rem; color: var(--gray-500); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* PROBLEM */
+        .problem { padding: 5rem 0; background: var(--gray-100); }
+        .problem-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+        @media (min-width: 576px) { .problem-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 992px) { .problem-grid { grid-template-columns: repeat(4, 1fr); } }
+        .problem-card { background: var(--white); border-radius: 14px; padding: 1.5rem; border: 1px solid var(--gray-200); border-top: 3px solid var(--orange); }
+        .problem-card .pc-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        .problem-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+        .problem-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.6; }
+        .problem-answer { margin-top: 2.5rem; text-align: center; }
+        .problem-answer p { font-family: var(--serif); font-size: 1.5rem; color: var(--text); max-width: 720px; margin: 0 auto; line-height: 1.4; }
+        .problem-answer em { font-style: italic; color: var(--accent-dark); }
+
+        /* SUITE */
+        .suite { padding: 5rem 0; }
+        .suite-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 600px) { .suite-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 992px) { .suite-grid { grid-template-columns: repeat(3, 1fr); } }
+        .suite-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 16px; padding: 1.75rem; transition: all 0.3s; }
+        .suite-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: var(--accent); }
+        .suite-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.1rem; }
+        .suite-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; }
+        .suite-card p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.65; }
+        .suite-card .tag { display: inline-block; margin-top: 0.9rem; font-size: 0.72rem; font-weight: 700; color: var(--gray-600); background: var(--gray-100); padding: 0.25rem 0.7rem; border-radius: 100px; }
+
+        /* SUBJECTS */
+        .subjects { padding: 5rem 0; background: var(--navy); color: var(--white); }
+        .subjects .section-title { color: var(--white); }
+        .subjects .section-desc { color: rgba(255,255,255,0.6); }
+        .subj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
+        @media (min-width: 576px) { .subj-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 900px) { .subj-grid { grid-template-columns: repeat(5, 1fr); } }
+        .subj { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem 0.75rem; text-align: center; transition: all 0.2s; }
+        .subj:hover { background: rgba(0,212,126,0.1); border-color: var(--accent); }
+        .subj .e { font-size: 1.6rem; display: block; margin-bottom: 0.4rem; }
+        .subj span { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.85); }
+
+        /* AUDIENCE */
+        .audience { padding: 5rem 0; background: var(--gray-100); }
+        .aud-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 768px) { .aud-grid { grid-template-columns: 1fr 1fr; } }
+        .aud-card { background: var(--white); border-radius: 18px; padding: 2.25rem; border: 1px solid var(--gray-200); }
+        .aud-card .aud-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .aud-card h3 { font-family: var(--serif); font-size: 1.6rem; margin-bottom: 1rem; }
+        .aud-card ul { list-style: none; }
+        .aud-card li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; padding: 0.4rem 0; }
+        .aud-card li::before { content: '✓'; color: var(--accent-dark); font-weight: 800; flex-shrink: 0; }
+
+        /* WHY OFFLINE */
+        .why { padding: 5rem 0; }
+        .why-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+        @media (min-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+        .why-list { display: grid; gap: 1.25rem; }
+        .why-item { display: flex; gap: 1rem; align-items: flex-start; }
+        .why-item .wi-icon { width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+        .why-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .why-item p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.6; }
+        .why-visual { background: var(--navy); border-radius: 20px; padding: 2.5rem; color: var(--white); text-align: center; }
+        .why-visual .big { font-family: var(--serif); font-size: 3.5rem; color: var(--accent); line-height: 1; }
+        .why-visual .big-sub { font-size: 0.95rem; color: rgba(255,255,255,0.6); margin: 0.5rem 0 1.5rem; }
+        .why-visual .why-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+        .why-visual .why-tag { font-size: 0.75rem; font-weight: 600; padding: 0.35rem 0.8rem; border-radius: 100px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
+
+        /* PLANS */
+        .plans { padding: 5rem 0; background: var(--gray-100); }
+        .plans-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+        @media (min-width: 768px) { .plans-grid { grid-template-columns: repeat(3, 1fr); } }
+        .plan { background: var(--white); border: 1px solid var(--gray-200); border-radius: 18px; padding: 2rem; position: relative; display: flex; flex-direction: column; }
+        .plan.featured { border: 2px solid var(--accent); box-shadow: 0 16px 48px rgba(0,212,126,0.12); }
+        .plan-pop { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--navy); font-size: 0.7rem; font-weight: 800; padding: 0.3rem 1rem; border-radius: 100px; letter-spacing: 0.03em; }
+        .plan h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .plan .plan-who { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 1.25rem; }
+        .plan .plan-price { font-family: var(--serif); font-size: 1.6rem; color: var(--navy); margin-bottom: 0.25rem; }
+        .plan .plan-price small { font-size: 0.8rem; color: var(--gray-400); font-family: var(--sans); }
+        .plan .plan-note { font-size: 0.78rem; color: var(--gray-400); margin-bottom: 1.25rem; }
+        .plan ul { list-style: none; margin-bottom: 1.5rem; flex: 1; }
+        .plan li { display: flex; gap: 0.55rem; align-items: flex-start; font-size: 0.85rem; color: var(--gray-600); padding: 0.35rem 0; line-height: 1.5; }
+        .plan li::before { content: '✓'; color: var(--accent-dark); font-weight: 800; flex-shrink: 0; }
+        .plan .btn-accent, .plan .btn-dark { width: 100%; justify-content: center; }
+        .plans-foot { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--gray-500); }
+
+        /* FAQ */
+        .faq { padding: 5rem 0; }
+        .faq-wrap { max-width: 760px; margin: 0 auto; }
+        .faq-item { border: 1px solid var(--gray-200); border-radius: 12px; margin-bottom: 0.75rem; overflow: hidden; }
+        .faq-q { width: 100%; text-align: left; background: var(--white); border: none; padding: 1.1rem 1.25rem; font-size: 0.95rem; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+        .faq-q::after { content: '+'; color: var(--accent-dark); font-size: 1.4rem; flex-shrink: 0; transition: transform 0.2s; }
+        .faq-item.active .faq-q::after { transform: rotate(45deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.active .faq-a { max-height: 320px; }
+        .faq-a p { padding: 0 1.25rem 1.25rem; font-size: 0.9rem; color: var(--gray-500); line-height: 1.7; }
+
+        /* CTA */
+        .cta { padding: 5rem 0; background: var(--navy); text-align: center; position: relative; overflow: hidden; }
+        .cta::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%); pointer-events: none; }
+        .cta-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+        .cta h2 { font-family: var(--serif); font-size: 2.25rem; color: var(--white); margin-bottom: 1rem; line-height: 1.2; }
+        @media (min-width: 768px) { .cta h2 { font-size: 2.75rem; } }
+        .cta p { font-size: 1rem; color: rgba(255,255,255,0.6); margin-bottom: 2rem; line-height: 1.7; }
+        .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        /* FOOTER */
+        footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.06); padding: 3rem 0 1.5rem; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2.5rem; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+        .footer-brand-name { font-size: 1.25rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+        .footer-brand-name span { color: var(--accent); }
+        .footer-brand p { font-size: 0.8rem; color: var(--gray-400); line-height: 1.6; margin-bottom: 0.25rem; }
+        .footer-rc { font-size: 0.75rem; color: var(--accent); font-weight: 600; margin-top: 0.5rem; }
+        .footer-col h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-400); margin-bottom: 1rem; }
+        .footer-col a { display: block; font-size: 0.85rem; color: var(--gray-400); padding: 0.3rem 0; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom { padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; }
+        .footer-bottom p { font-size: 0.75rem; color: var(--gray-500); }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-content { animation: fadeUp 0.8s ease-out; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.svg" alt="Simpliflex Systems Limited">
+                <span class="pill">Learn</span>
+            </a>
+            <div class="nav-links">
+                <a href="#suite">What's Inside</a>
+                <a href="#audience">For Parents &amp; Schools</a>
+                <a href="#plans">Plans</a>
+                <a href="#faq">FAQ</a>
+                <a href="index.html">← Simpliflex Home</a>
+            </div>
+            <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27d%20like%20to%20book%20a%20Simpliflex%20Learn%20walkthrough." class="nav-cta">Book a Walkthrough</a>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+        <a href="#suite" onclick="toggleMenu()">What's Inside</a>
+        <a href="#audience" onclick="toggleMenu()">For Parents &amp; Schools</a>
+        <a href="#plans" onclick="toggleMenu()">Plans</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="learn-demo/index.html">Try the Live Demo</a>
+        <a href="index.html" onclick="toggleMenu()">← Simpliflex Home</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">A Simpliflex Systems product</div>
+                    <h1>Learning that works <em>even when the internet doesn't</em></h1>
+                    <p>Simpliflex Learn is a complete, 100% offline learning suite for children ages 6–13 — an interactive encyclopedia, thousands of curriculum-aligned practice questions, educational games and a parent dashboard. No data costs. No ads. No distractions.</p>
+                    <div class="hero-actions">
+                        <a href="learn-demo/index.html" class="btn-accent">▶ Try the Live Demo</a>
+                        <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27d%20like%20to%20book%20a%20Simpliflex%20Learn%20walkthrough." class="btn-ghost">Book a Walkthrough</a>
+                    </div>
+                    <p class="hero-note">Works fully offline · <strong>No subscription to use offline</strong> · Built for Nigerian homes &amp; schools</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="device">
+                        <div class="device-screen">
+                            <div class="ds-top">
+                                <span class="ds-logo">📚</span>
+                                <span class="ds-title">Simpliflex <span>Learn</span></span>
+                            </div>
+                            <div class="ds-grid">
+                                <div class="ds-tile" style="background:#dbeafe">🌍<small>Geography</small></div>
+                                <div class="ds-tile" style="background:#dcfce7">🦁<small>Animals</small></div>
+                                <div class="ds-tile" style="background:#fee2e2">🏛️<small>History</small></div>
+                                <div class="ds-tile" style="background:#ede9fe">🔬<small>Science</small></div>
+                                <div class="ds-tile" style="background:#fce7f3">🎨<small>Art</small></div>
+                                <div class="ds-tile" style="background:#fef3c7">♟️<small>Games</small></div>
+                            </div>
+                            <div class="ds-bar">
+                                <div class="ds-chip"><b>335+</b>Articles</div>
+                                <div class="ds-chip"><b>12k+</b>Questions</div>
+                                <div class="ds-chip"><b>7</b>Worlds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item"><h3>335<span>+</span></h3><p>Encyclopedia Articles</p></div>
+                <div class="trust-item"><h3>12,000<span>+</span></h3><p>Practice Questions</p></div>
+                <div class="trust-item"><h3>14<span>+</span></h3><p>School Subjects</p></div>
+                <div class="trust-item"><h3>100<span>%</span></h3><p>Offline · No Ads</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem">
+        <div class="container">
+            <p class="section-label">The Problem</p>
+            <h2 class="section-title">Most learning apps weren't built for our reality</h2>
+            <p class="section-desc">Nigerian parents want their children learning — but the everyday apps work against them.</p>
+            <div class="problem-grid">
+                <div class="problem-card"><div class="pc-icon">📶</div><h4>They need data</h4><p>Streaming lessons burns through expensive data, and stops the moment the network drops.</p></div>
+                <div class="problem-card"><div class="pc-icon">📺</div><h4>They're full of ads</h4><p>Free apps push adverts, pop-ups and in-app purchases at children all day long.</p></div>
+                <div class="problem-card"><div class="pc-icon">🎯</div><h4>They're not structured</h4><p>Random videos and games — nothing aligned to what a child should actually be learning.</p></div>
+                <div class="problem-card"><div class="pc-icon">🙈</div><h4>Parents can't see progress</h4><p>You hand over the phone and hope. No record of what was learned or practised.</p></div>
+            </div>
+            <div class="problem-answer">
+                <p>Simpliflex Learn fixes all four — a <em>structured, offline, ad-free</em> world a child can explore safely, with a dashboard that shows you exactly what they're learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUITE / WHAT'S INSIDE -->
+    <section class="suite" id="suite">
+        <div class="container">
+            <p class="section-label">What's Inside</p>
+            <h2 class="section-title">One suite. Everything a curious child needs.</h2>
+            <p class="section-desc">Built from the ground up, curriculum-aligned, and fully customisable to your school's curriculum.</p>
+            <div class="suite-grid">
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(59,130,246,0.12)">📚</div>
+                    <h3>Interactive Encyclopedia</h3>
+                    <p>335 fact-checked articles across 7 worlds — Animals, Geography, History, Science &amp; Space, Art &amp; Culture, Today's World and Games — with labelled diagrams, "Did you know?" facts and scavenger hunts.</p>
+                    <span class="tag">Ages 9–13</span>
+                </div>
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(0,212,126,0.12)">✏️</div>
+                    <h3>Mastery Practice</h3>
+                    <p>12,000+ auto-marked practice questions and 6,000+ quizzes across 14 subjects — Maths, English, Science, Computing, Languages and more — with instant feedback and offline help.</p>
+                    <span class="tag">KS1 · KS2 · Year 7</span>
+                </div>
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(245,158,11,0.12)">♟️</div>
+                    <h3>Learning Games</h3>
+                    <p>A full chess engine with a computer opponent, Times-Tables Rock, Word Builder, Scramble, Hangman and Word Search — fun that quietly builds real skills.</p>
+                    <span class="tag">All ages</span>
+                </div>
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(139,92,246,0.12)">📕</div>
+                    <h3>Children's Dictionary</h3>
+                    <p>Nearly 63,000 words with clear definitions, parts of speech and examples — a word-of-the-day and instant lookups, all stored on the device.</p>
+                    <span class="tag">Built-in</span>
+                </div>
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(236,72,153,0.12)">📊</div>
+                    <h3>Parent Dashboard</h3>
+                    <p>See exactly what each child has explored, practised and mastered — topics visited, words learned, quiz scores — in one private dashboard per child.</p>
+                    <span class="tag">For parents &amp; teachers</span>
+                </div>
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(0,212,126,0.12)">🔒</div>
+                    <h3>Safe &amp; Private</h3>
+                    <p>No ads, no chat, no in-app purchases, no data collection. Each child signs in to their own space. Everything runs on your own device.</p>
+                    <span class="tag">Child-safe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBJECTS -->
+    <section class="subjects">
+        <div class="container">
+            <p class="section-label">Curriculum Coverage</p>
+            <h2 class="section-title">14 subjects, one place</h2>
+            <p class="section-desc">From foundation literacy and numeracy to languages and the sciences — structured topic by topic.</p>
+            <div class="subj-grid">
+                <div class="subj"><span class="e">🔢</span><span>Maths</span></div>
+                <div class="subj"><span class="e">📖</span><span>English</span></div>
+                <div class="subj"><span class="e">🔬</span><span>Science</span></div>
+                <div class="subj"><span class="e">💻</span><span>Computing</span></div>
+                <div class="subj"><span class="e">🌍</span><span>Geography</span></div>
+                <div class="subj"><span class="e">🏛️</span><span>History</span></div>
+                <div class="subj"><span class="e">🎨</span><span>Art</span></div>
+                <div class="subj"><span class="e">🕊️</span><span>R.S.</span></div>
+                <div class="subj"><span class="e">🇩🇪</span><span>German</span></div>
+                <div class="subj"><span class="e">🇪🇸</span><span>Spanish</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM CUSTOMISATION -->
+    <section class="suite" id="curriculum">
+        <div class="container">
+            <p class="section-label">Made For Your Classroom</p>
+            <h2 class="section-title">Built around your curriculum, not ours</h2>
+            <p class="section-desc">The platform is subject-agnostic — the same engine already powers everything from foundation KS1 to Year 7 across 14 subjects. That means we can shape the content to fit exactly how <em>your</em> school teaches.</p>
+            <div class="suite-grid">
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(0,212,126,0.12)">🇳🇬</div>
+                    <h3>Any curriculum</h3>
+                    <p>Aligned to the Nigerian National Curriculum (NERDC / UBE), or British, Cambridge, Montessori and faith-based programmes — your choice, your standards.</p>
+                </div>
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(59,130,246,0.12)">➕</div>
+                    <h3>Your subjects &amp; topics</h3>
+                    <p>Need a subject we don't list, or topics tuned to your scheme of work and exam syllabus? We add and adjust content to match — including local context and language.</p>
+                </div>
+                <div class="suite-card">
+                    <div class="suite-icon" style="background:rgba(139,92,246,0.12)">🛠️</div>
+                    <h3>We do the work</h3>
+                    <p>You tell us the curriculum and goals; Simpliflex builds, brands and maintains it. No technical effort on your side — and it keeps working offline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section class="audience" id="audience">
+        <div class="container">
+            <p class="section-label">Who It's For</p>
+            <h2 class="section-title">Built for homes and schools</h2>
+            <p class="section-desc">The same engine, configured for two very different needs.</p>
+            <div class="aud-grid">
+                <div class="aud-card">
+                    <div class="aud-icon">👨‍👩‍👧</div>
+                    <h3>For Parents</h3>
+                    <ul>
+                        <li>Give your child a safe, structured place to learn — without handing them the open internet.</li>
+                        <li>No data costs after install: works on the school run, in the village, anywhere.</li>
+                        <li>Each child gets their own profile and their own progress.</li>
+                        <li>A dashboard that finally answers "what did you learn today?"</li>
+                        <li>One purchase covers the whole suite — no constant in-app payments.</li>
+                    </ul>
+                    <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27m%20a%20parent%20interested%20in%20Simpliflex%20Learn." class="btn-dark">Talk to us as a parent</a>
+                </div>
+                <div class="aud-card">
+                    <div class="aud-icon">🏫</div>
+                    <h3>For Schools</h3>
+                    <ul>
+                        <li>Deploy across a computer lab or tablets — runs locally, no reliable internet required.</li>
+                        <li>Curriculum-aligned content teachers can set as classwork or homework.</li>
+                        <li>Per-pupil progress visible to teachers and administrators.</li>
+                        <li>Brandable for your school; bulk licensing for any number of pupils.</li>
+                        <li>Onboarding, setup and teacher training included.</li>
+                    </ul>
+                    <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27m%20enquiring%20about%20Simpliflex%20Learn%20for%20my%20school." class="btn-dark">Enquire for your school</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY OFFLINE -->
+    <section class="why">
+        <div class="container">
+            <div class="why-grid">
+                <div>
+                    <p class="section-label">Why Offline Matters</p>
+                    <h2 class="section-title">Designed for Nigerian reality</h2>
+                    <div class="why-list">
+                        <div class="why-item"><div class="wi-icon">📶</div><div><h4>No network, no problem</h4><p>Everything is installed on the device. Patchy signal or no signal — the learning never stops.</p></div></div>
+                        <div class="why-item"><div class="wi-icon">💸</div><div><h4>Zero data cost to use</h4><p>Once installed, children can use it for hours without spending a single naira on data.</p></div></div>
+                        <div class="why-item"><div class="wi-icon">🛡️</div><div><h4>Safe by design</h4><p>No ads, no links out, no strangers, no purchases. A walled garden you can trust.</p></div></div>
+                        <div class="why-item"><div class="wi-icon">🔋</div><div><h4>Runs on modest devices</h4><p>Light enough for older laptops and tablets — no expensive hardware needed.</p></div></div>
+                    </div>
+                </div>
+                <div class="why-visual">
+                    <div class="big">₦0</div>
+                    <div class="big-sub">data spent while learning, after install</div>
+                    <div class="why-tags">
+                        <span class="why-tag">No ads</span>
+                        <span class="why-tag">No subscriptions to use</span>
+                        <span class="why-tag">No tracking</span>
+                        <span class="why-tag">No in-app purchases</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <p class="section-label center">Plans</p>
+            <h2 class="section-title center">Simple plans for families and schools</h2>
+            <p class="section-desc center">We tailor pricing to your situation — get a quick quote on WhatsApp, no obligation.</p>
+            <div class="plans-grid">
+                <div class="plan">
+                    <h3>Home</h3>
+                    <p class="plan-who">For one family, up to 3 children</p>
+                    <div class="plan-price">Request a quote</div>
+                    <p class="plan-note">One-time setup + optional updates</p>
+                    <ul>
+                        <li>Full suite on your device</li>
+                        <li>Up to 3 child profiles</li>
+                        <li>Parent dashboard</li>
+                        <li>Yearly content refresh (optional)</li>
+                    </ul>
+                    <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27d%20like%20a%20quote%20for%20the%20Simpliflex%20Learn%20Home%20plan." class="btn-dark">Get a Quote</a>
+                </div>
+                <div class="plan featured">
+                    <span class="plan-pop">Most Popular</span>
+                    <h3>School / Class</h3>
+                    <p class="plan-who">For a classroom or computer lab</p>
+                    <div class="plan-price">Request a quote</div>
+                    <p class="plan-note">Per-pupil licensing, volume pricing</p>
+                    <ul>
+                        <li>Deploy across lab or tablets</li>
+                        <li>Per-pupil profiles &amp; progress</li>
+                        <li>Teacher dashboard</li>
+                        <li>School branding</li>
+                        <li>Setup &amp; teacher training</li>
+                    </ul>
+                    <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27d%20like%20a%20quote%20for%20Simpliflex%20Learn%20for%20my%20school." class="btn-accent">Get a Quote</a>
+                </div>
+                <div class="plan">
+                    <h3>Multi-School</h3>
+                    <p class="plan-who">Groups, NGOs &amp; government programmes</p>
+                    <div class="plan-price">Custom</div>
+                    <p class="plan-note">Tailored to your programme</p>
+                    <ul>
+                        <li>Unlimited pupils across sites</li>
+                        <li>Custom subjects &amp; localisation</li>
+                        <li>Central reporting</li>
+                        <li>Dedicated support &amp; rollout</li>
+                    </ul>
+                    <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27d%20like%20to%20discuss%20Simpliflex%20Learn%20for%20multiple%20schools." class="btn-dark">Talk to Us</a>
+                </div>
+            </div>
+            <p class="plans-foot">Not sure which fits? <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%20have%20a%20question%20about%20Simpliflex%20Learn." style="color:var(--accent-dark);font-weight:700">Message us</a> and we'll recommend the right option.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <p class="section-label center">FAQ</p>
+            <h2 class="section-title center">Questions parents &amp; schools ask</h2>
+            <div class="faq-wrap" style="margin-top:2.5rem">
+                <div class="faq-item"><button class="faq-q">Does it really work without the internet?</button><div class="faq-a"><p>Yes — completely. Once Simpliflex Learn is installed on a device, every article, question, game and dictionary entry works offline. You only need a connection for optional yearly content updates.</p></div></div>
+                <div class="faq-item"><button class="faq-q">What ages and levels does it cover?</button><div class="faq-a"><p>Children roughly 6–13. The practice content spans KS1 foundations through KS2 and into Year 7, aligned to the UK National Curriculum and adapted for Nigerian learners. The encyclopedia suits ages 9–13, while the games and dictionary work for everyone.</p></div></div>
+                <div class="faq-item"><button class="faq-q">What devices does it run on?</button><div class="faq-a"><p>Any reasonably modern laptop, desktop or tablet with a web browser. It's deliberately lightweight, so it runs well on older and lower-cost hardware — ideal for homes and school labs.</p></div></div>
+                <div class="faq-item"><button class="faq-q">Is it safe for children?</button><div class="faq-a"><p>Very. There are no ads, no external links, no chat with strangers, no in-app purchases and no data collection. It's a closed, controlled environment — a walled garden you can hand to a child with confidence.</p></div></div>
+                <div class="faq-item"><button class="faq-q">Can I see what my child is learning?</button><div class="faq-a"><p>Yes. Every child has their own profile, and the parent/teacher dashboard shows topics explored, words learned, games played and quiz results — so you always know what's happening.</p></div></div>
+                <div class="faq-item"><button class="faq-q">How much does it cost?</button><div class="faq-a"><p>Pricing depends on whether you're a family, a single school or a group of schools, and how many children are involved. Tap any "Get a Quote" button and we'll give you a clear, no-obligation price on WhatsApp.</p></div></div>
+                <div class="faq-item"><button class="faq-q">Can it be branded for my school?</button><div class="faq-a"><p>Yes — school and class plans can carry your school's name and branding, and we can add or adjust subjects to match your curriculum. Setup and teacher training are included.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>See it for yourself</h2>
+                <p>Try the live demo right now — no sign-up — then message us to set it up for your family or school.</p>
+                <div class="cta-actions">
+                    <a href="learn-demo/index.html" class="btn-accent">▶ Try the Live Demo</a>
+                    <a href="https://wa.me/2347035222266?text=Hello%20Simpliflex%2C%20I%27d%20like%20to%20book%20a%20Simpliflex%20Learn%20walkthrough." class="btn-ghost">Book a Walkthrough</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand-name">Simpliflex <span>Learn</span></div>
+                    <p>Offline learning for curious children</p>
+                    <p>A product of Simpliflex Systems Limited</p>
+                    <p class="footer-rc">RC-9336897</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Simpliflex Learn</h4>
+                    <a href="#suite">What's Inside</a>
+                    <a href="#audience">For Parents &amp; Schools</a>
+                    <a href="#plans">Plans</a>
+                    <a href="learn-demo/index.html">Live Demo</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="index.html">Simpliflex Home</a>
+                    <a href="index.html#products">Our Products</a>
+                    <a href="index.html#about">About Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="https://wa.me/2347035222266">WhatsApp</a>
+                    <a href="mailto:info@simpliflex.com.ng">Email</a>
+                    <a href="tel:+2347035222266">+234 703 522 2266</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Simpliflex Systems Limited (RC-9336897). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 880) { document.getElementById('mobileMenu').classList.remove('active'); document.body.style.overflow = ''; }
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') { e.preventDefault(); const t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+        document.querySelectorAll('.faq-q').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const active = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!active) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

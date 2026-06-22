@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curious Kids Encyclopedia</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="../learn.html" style="display:flex;align-items:center;justify-content:center;gap:.5rem;background:#0A1628;color:#fff;font:600 13px/1.4 system-ui,-apple-system,'DM Sans',sans-serif;padding:.55rem 1rem;text-decoration:none;border-bottom:2px solid #00D47E">
+    <span style="opacity:.7">Live demo of</span>
+    <span><b>Simpliflex&nbsp;<span style="color:#00D47E">Learn</span></b></span>
+    <span style="opacity:.55">— this is a free sample. Tap to see plans &amp; book a walkthrough →</span>
+  </a>
+  <div id="app"></div>
+
+  <!-- 1) registry + illustration engine + special-days calendar + chess engine -->
+  <script src="js/data-loader.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/days.js"></script>
+  <script src="js/chess.js"></script>
+  <script src="js/wordlist.js"></script>
+  <script src="js/wordgames.js"></script>
+  <script src="js/tables.js"></script>
+  <!-- js/dictionary.js (~8 MB) is loaded on demand only when the Dictionary opens -->
+
+
+  <!-- 2) the five worlds, then all article files (added as they are written) -->
+  <script src="content/categories.js"></script>
+  <script src="content/animals/sample.js"></script>
+  <script src="content/animals/a01.js"></script>
+  <script src="content/animals/a02.js"></script>
+  <script src="content/animals/a03.js"></script>
+  <script src="content/animals/a04.js"></script>
+  <script src="content/animals/a05.js"></script>
+  <script src="content/animals/a06.js"></script>
+  <script src="content/geography/g01.js"></script>
+  <script src="content/geography/g02.js"></script>
+  <script src="content/geography/g03.js"></script>
+  <script src="content/geography/g04.js"></script>
+  <script src="content/geography/g05.js"></script>
+  <script src="content/geography/g06.js"></script>
+  <script src="content/geography/country-facts.js"></script>
+  <script src="content/today/t01.js"></script>
+  <script src="content/today/t02.js"></script>
+  <script src="content/today/t03.js"></script>
+  <script src="content/history/h01.js"></script>
+  <script src="content/history/h02.js"></script>
+  <script src="content/history/h03.js"></script>
+  <script src="content/history/h04.js"></script>
+  <script src="content/history/h05.js"></script>
+  <script src="content/history/h06.js"></script>
+  <script src="content/science/s01.js"></script>
+  <script src="content/science/s02.js"></script>
+  <script src="content/science/s03.js"></script>
+  <script src="content/science/s04.js"></script>
+  <script src="content/science/s05.js"></script>
+  <script src="content/science/s06.js"></script>
+  <script src="content/art/ar01.js"></script>
+  <script src="content/art/ar02.js"></script>
+  <script src="content/art/ar03.js"></script>
+  <script src="content/art/ar04.js"></script>
+  <script src="content/art/ar05.js"></script>
+  <script src="content/art/ar06.js"></script>
+  <script src="content/games/gm01.js"></script>
+  <script src="content/games/gm02.js"></script>
+  <script src="content/games/tables.js"></script>
+  <script src="content/games/builder.js"></script>
+  <script src="content/games/scramble.js"></script>
+  <script src="content/games/hangman.js"></script>
+  <script src="content/games/search.js"></script>
+
+  <!-- 3) the app engine (last) -->
+  <script src="js/app.js"></script>
+</body>
+</html>

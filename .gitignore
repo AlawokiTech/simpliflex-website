@@ -1,0 +1,11 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Packaged deploy artifacts (we deploy folders, not zips)
+*.zip
+
+# Temp render sources
+_ogsrc_*.html
+_logosrc.html
